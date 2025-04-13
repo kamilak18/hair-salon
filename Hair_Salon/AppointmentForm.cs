@@ -10,7 +10,6 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using hair_salon_system;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -21,10 +20,13 @@ namespace Hair_Salon
 {
     public partial class AppointmentForm : MaterialForm
     {
-        private readonly DataManager dataManager;
+        private readonly DataManager<Appointment> dataManager;
         public AppointmentForm()
         {
             InitializeComponent();
+
+            dataManager = new DataManager<Appointment>();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -32,7 +34,21 @@ namespace Hair_Salon
                 Primary.BlueGrey800, Primary.BlueGrey900,
                 Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE
             );
-            dataManager = new DataManager();
+            var appointments = FileManager.GetEntities<Appointment>("appointments.txt");
+            foreach (var app in appointments)
+            {
+                dataManager.Add(app);
+                var item = new ListViewItem(appListView.Items.Count + 1 + "");
+                item.SubItems.Add(app.ClientName);
+                item.SubItems.Add(app.Hairstyle);
+                item.SubItems.Add(app.Date.ToString());
+                item.SubItems.Add(app.Price);
+                item.SubItems.Add(app.HairdresserName);
+                item.SubItems.Add(app.Id.ToString());
+
+                appListView.Items.Add(item);
+                
+            }
         }
 
 
@@ -64,45 +80,7 @@ namespace Hair_Salon
 
 
 
-        private void showallButton_Click_1(object sender, EventArgs e)
-        {
-            string[] clients = File.ReadAllLines("appointments.txt");
-            foreach (var line in clients)
-            {
-                var parts = line.Trim('[', ']').Split(new[] { "][" }, StringSplitOptions.None);
-
-                if (parts.Length == 6)
-                {
-                    var item = new ListViewItem(appListView.Items.Count + 1 + "");
-
-                    var clientName = parts[1];
-                    item.SubItems.Add(clientName);
-                    var hairstyle = parts[2];
-                    item.SubItems.Add(hairstyle);
-                    var date = parts[3];
-                    if (DateTime.TryParseExact(date, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
-                    {
-                        item.SubItems.Add(parsedDate.ToString("dd.MM.yyyy"));
-                    }
-                    var price = parts[4];
-                    item.SubItems.Add(price);
-                    var hairdresser = parts[5];
-                    item.SubItems.Add(hairdresser);
-
-                    var id = parts[0];
-                    Guid Id = Guid.Parse(id);
-
-                    appListView.Items.Add(item);
-
-                    item.SubItems.Add(id);
-                    var appointment = new Appointment(Id, clientName, hairstyle, parsedDate, price, hairdresser);
-
-                    FileManager.WriteToFile(appointment);
-                    // Add to collection for future data manipulation
-                    dataManager.Add(appointment);
-                }
-            }
-        }
+        
 
         private void searchButton_Click_1(object sender, EventArgs e)
         {
@@ -214,11 +192,6 @@ namespace Hair_Salon
             {
                 MaterialMessageBox.Show(ex.Message);
             }
-        }
-
-        private void selectedTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void appListView_SelectedIndexChanged(object sender, EventArgs e)

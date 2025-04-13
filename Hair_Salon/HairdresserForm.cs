@@ -1,5 +1,4 @@
-﻿using hair_salon_system;
-using MaterialSkin;
+﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -40,7 +39,7 @@ namespace Hair_Salon
             }
             Hairdresser hairdresser = new Hairdresser(id, fullname, password);
             hairdresser.SaveToFile("hairdressers.txt", fullname);
-            hairdresser.ReadSchedule("clients.txt", clientsListBox);
+            hairdresser.ReadPersons("clients.txt", clientsListBox);
         }
 
         private void serveButton_Click(object sender, EventArgs e)

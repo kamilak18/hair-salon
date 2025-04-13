@@ -143,6 +143,7 @@
             passwordBox.MouseState = MaterialSkin.MouseState.OUT;
             passwordBox.Multiline = false;
             passwordBox.Name = "passwordBox";
+            passwordBox.Password = true;
             passwordBox.Size = new Size(179, 50);
             passwordBox.TabIndex = 7;
             passwordBox.Text = "";
@@ -153,7 +154,7 @@
             clientsListBox.BackColor = Color.White;
             clientsListBox.BorderColor = Color.LightGray;
             clientsListBox.Depth = 0;
-            clientsListBox.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            clientsListBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             clientsListBox.Location = new Point(403, 134);
             clientsListBox.MouseState = MaterialSkin.MouseState.HOVER;
             clientsListBox.Name = "clientsListBox";

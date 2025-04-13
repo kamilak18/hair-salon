@@ -5,8 +5,8 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
-    public delegate bool FilterDelegate(IEntity entity);
+    public delegate bool FilterDelegate<T>(T entity) where T : IEntity;
 }
 

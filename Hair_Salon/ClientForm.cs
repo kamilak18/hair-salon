@@ -1,5 +1,4 @@
-﻿using hair_salon_system;
-using MaterialSkin;
+﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;

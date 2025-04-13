@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\super\\source\\repos\\kamilak18\\hair-salon\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{14AA6A16-0C19-43F5-B130-51D73BCE91FD}|Hair_Salon\\Hair_Salon.csproj|c:\\users\\super\\source\\repos\\kamilak18\\hair-salon\\hair_salon\\appointmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{14AA6A16-0C19-43F5-B130-51D73BCE91FD}|Hair_Salon\\Hair_Salon.csproj|solutionrelative:hair_salon\\appointmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,27 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppointmentForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\super\\source\\repos\\kamilak18\\hair-salon\\Hair_Salon\\AppointmentForm.cs",
-              "RelativeDocumentMoniker": "Hair_Salon\\AppointmentForm.cs",
-              "ToolTip": "C:\\Users\\super\\source\\repos\\kamilak18\\hair-salon\\Hair_Salon\\AppointmentForm.cs [Design]",
-              "RelativeToolTip": "Hair_Salon\\AppointmentForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T09:56:24.821Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

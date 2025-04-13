@@ -182,6 +182,7 @@
             passwordBox.MouseState = MaterialSkin.MouseState.OUT;
             passwordBox.Multiline = false;
             passwordBox.Name = "passwordBox";
+            passwordBox.Password = true;
             passwordBox.Size = new Size(200, 50);
             passwordBox.TabIndex = 8;
             passwordBox.Text = "";

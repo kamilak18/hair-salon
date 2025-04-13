@@ -1,13 +1,12 @@
-﻿using hair_salon_system;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
-    public static class FileManager 
+    public static class FileManager
     {
         public static void WriteToFile(Entity entity)
         {
@@ -26,5 +25,19 @@ namespace hair_salon_system
             }
 
         }
+        public static IEnumerable<T> GetEntities<T>(string path) where T : IEntity, new()
+        {
+            var list = new List<T>(); 
+            var lines = File.ReadAllLines(path); 
+
+            foreach (var line in lines) 
+            {
+                var entity = new T(); 
+                entity.Parse(line); 
+                list.Add(entity);
+                yield return entity;
+            }
+        }
+
     }
 }

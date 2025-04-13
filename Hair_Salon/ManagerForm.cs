@@ -1,5 +1,4 @@
-﻿using hair_salon_system;
-using MaterialSkin;
+﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -44,8 +43,8 @@ namespace Hair_Salon
 
                 string[] clients = File.ReadAllLines("clients.txt");
 
-                manager.ReadPersons(clientsListBox, "clients.txt");
-                manager.ReadPersons(hairdresserListBox, "hairdressers.txt");
+                manager.ReadPersons("clients.txt", clientsListBox);
+                manager.ReadPersons("hairdressers.txt", hairdresserListBox);
 
             }
         }

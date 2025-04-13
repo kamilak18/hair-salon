@@ -10,7 +10,7 @@ using MaterialSkin.Controls;
 using Microsoft.VisualBasic.ApplicationServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
     sealed class Manager : User
     {
@@ -20,45 +20,6 @@ namespace hair_salon_system
             Password = password;
         }
 
-
-        public void ReadPersons(MaterialListBox listBox, string fileName)
-        {
-            if (File.Exists(fileName))
-            {
-                listBox.Items.Clear();
-                string[] lines = File.ReadAllLines(fileName);
-
-                foreach (var line in lines)
-                {
-                    var parts = line.Trim('[', ']').Split(new[] { "][" }, StringSplitOptions.None);
-                    if (parts.Length < 3)
-                    {
-                        var item = new ListViewItem();
-                        var masterName = parts[1];
-                        string text = $"{masterName}";
-                        listBox.Items.Add(new MaterialListBoxItem(text));
-                    }
-                    else
-                    {
-                        var item1 = new ListViewItem();
-
-                        var parts1 = line.Trim('[', ']').Split(new[] { "][" }, StringSplitOptions.None);
-
-                        var clientName = parts1[1];
-                        var hairstyle = parts1[2];
-                        var date = parts1[3];
-                        var price = parts1[4];
-                        string text1 = $"{clientName}, {hairstyle}, {date}, {price}";
-                        listBox.Items.Add(new MaterialListBoxItem(text1));
-                    }
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("File was not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public void ScheduleWithHairdressers(MaterialListBox listBox1, MaterialListBox listBox2, string fileName1, string fileName2)
         {

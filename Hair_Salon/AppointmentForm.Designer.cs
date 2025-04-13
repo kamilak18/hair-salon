@@ -40,7 +40,6 @@
             materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             filterButton = new MaterialSkin.Controls.MaterialButton();
-            showallButton = new MaterialSkin.Controls.MaterialButton();
             Number = new ColumnHeader();
             idColumn = new ColumnHeader();
             Client = new ColumnHeader();
@@ -79,7 +78,6 @@
             selectedTextBox.TabIndex = 2;
             selectedTextBox.Text = "";
             selectedTextBox.TrailingIcon = null;
-            selectedTextBox.TextChanged += selectedTextBox_TextChanged;
             // 
             // searchButton
             // 
@@ -122,7 +120,7 @@
             fromBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             fromBox.HideSelection = true;
             fromBox.LeadingIcon = null;
-            fromBox.Location = new Point(398, 173);
+            fromBox.Location = new Point(429, 173);
             fromBox.MaxLength = 32767;
             fromBox.MouseState = MaterialSkin.MouseState.OUT;
             fromBox.Name = "fromBox";
@@ -174,7 +172,7 @@
             materialLabel3.AutoSize = true;
             materialLabel3.Depth = 0;
             materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel3.Location = new Point(398, 104);
+            materialLabel3.Location = new Point(433, 103);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
             materialLabel3.Size = new Size(34, 19);
@@ -190,7 +188,7 @@
             toBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             toBox.HideSelection = true;
             toBox.LeadingIcon = null;
-            toBox.Location = new Point(549, 173);
+            toBox.Location = new Point(594, 173);
             toBox.MaxLength = 32767;
             toBox.MouseState = MaterialSkin.MouseState.OUT;
             toBox.Name = "toBox";
@@ -214,7 +212,7 @@
             materialLabel4.AutoSize = true;
             materialLabel4.Depth = 0;
             materialLabel4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel4.Location = new Point(398, 151);
+            materialLabel4.Location = new Point(429, 151);
             materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel4.Name = "materialLabel4";
             materialLabel4.Size = new Size(38, 19);
@@ -226,7 +224,7 @@
             materialLabel5.AutoSize = true;
             materialLabel5.Depth = 0;
             materialLabel5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel5.Location = new Point(549, 151);
+            materialLabel5.Location = new Point(594, 151);
             materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel5.Name = "materialLabel5";
             materialLabel5.Size = new Size(20, 19);
@@ -238,7 +236,7 @@
             materialLabel6.AutoSize = true;
             materialLabel6.Depth = 0;
             materialLabel6.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel6.Location = new Point(527, 187);
+            materialLabel6.Location = new Point(559, 190);
             materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
             materialLabel6.Size = new Size(5, 19);
@@ -252,7 +250,7 @@
             filterButton.Depth = 0;
             filterButton.HighEmphasis = true;
             filterButton.Icon = null;
-            filterButton.Location = new Point(673, 185);
+            filterButton.Location = new Point(741, 185);
             filterButton.Margin = new Padding(4, 6, 4, 6);
             filterButton.MouseState = MaterialSkin.MouseState.HOVER;
             filterButton.Name = "filterButton";
@@ -264,26 +262,6 @@
             filterButton.UseAccentColor = false;
             filterButton.UseVisualStyleBackColor = true;
             filterButton.Click += filterButton_Click_1;
-            // 
-            // showallButton
-            // 
-            showallButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            showallButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            showallButton.Depth = 0;
-            showallButton.HighEmphasis = true;
-            showallButton.Icon = null;
-            showallButton.Location = new Point(868, 185);
-            showallButton.Margin = new Padding(4, 6, 4, 6);
-            showallButton.MouseState = MaterialSkin.MouseState.HOVER;
-            showallButton.Name = "showallButton";
-            showallButton.NoAccentTextColor = Color.Empty;
-            showallButton.Size = new Size(93, 36);
-            showallButton.TabIndex = 15;
-            showallButton.Text = "Show all";
-            showallButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            showallButton.UseAccentColor = false;
-            showallButton.UseVisualStyleBackColor = true;
-            showallButton.Click += showallButton_Click_1;
             // 
             // Number
             // 
@@ -348,7 +326,6 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 735);
-            Controls.Add(showallButton);
             Controls.Add(filterButton);
             Controls.Add(materialLabel6);
             Controls.Add(materialLabel5);
@@ -381,7 +358,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialButton filterButton;
-        private MaterialSkin.Controls.MaterialButton showallButton;
         private ColumnHeader Number;
         private ColumnHeader idColumn;
         private ColumnHeader Client;

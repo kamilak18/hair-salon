@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
     public class Client : User
     {

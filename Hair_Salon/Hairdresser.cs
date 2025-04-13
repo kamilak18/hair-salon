@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
     class Hairdresser : User
     {
@@ -51,50 +51,6 @@ namespace hair_salon_system
             {
                 writer.WriteLine(base.Format());
             }
-        }
-
-
-        public void ReadSchedule(string fileName, MaterialListBox listBox)
-        {
-            if (File.Exists(fileName))
-            {
-                listBox.Items.Clear();
-                string[] lines = File.ReadAllLines(fileName);
-
-
-                foreach (string line in lines)
-                {
-                    var item = new ListViewItem();
-
-                    var parts = line.Trim('[', ']').Split(new[] { "][" }, StringSplitOptions.None);
-
-                    var clientName = parts[1];
-                    var hairstyle = parts[2];
-                    var date = parts[3];
-                    var price = parts[4];
-                    string text = $"{clientName}, {hairstyle}, {date}, {price}";
-                    listBox.Items.Add(new MaterialListBoxItem(text));
-                }
-            }
-            else
-            {
-                MessageBox.Show("File was not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        public bool CheckPassword(string password1, string path)
-        {
-            string password = File.ReadAllText(path).Trim();
-            if (password1 == password)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
         }
 
         public override string Format()

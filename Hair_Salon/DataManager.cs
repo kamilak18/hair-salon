@@ -5,17 +5,17 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hair_salon_system
+namespace Hair_Salon
 {
-    public class DataManager
+    public class DataManager<T> where T : IEntity
     {
-        public IEnumerable<IEntity> Entities { get; private set; } = new List<IEntity>();
+        public IEnumerable<T> Entities { get; private set; } = new List<T>();
 
-        public IEntity? this[Guid id]
+        public T? this[Guid id]
         {
             get
             {
-                IEntity? entity = null;
+                T? entity = default;
 
                 foreach (var item in Entities)
                 {
@@ -28,12 +28,12 @@ namespace hair_salon_system
             }
         }
 
-        public void Add(IEntity entity)
+        public void Add(T entity)
         {
             Entities = Entities.Append(entity);
         }
 
-        public IEnumerable<IEntity> Search(string searchString)
+        public IEnumerable<T> Search(string searchString)
         {
             foreach (var entity in Entities)
             {
@@ -44,7 +44,7 @@ namespace hair_salon_system
             }
         }
 
-        public IEnumerable<IEntity> Filter(FilterDelegate filter)
+        public IEnumerable<T> Filter(FilterDelegate<T> filter)
         {
             foreach (var entity in Entities)
             {
