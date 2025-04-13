@@ -57,6 +57,20 @@ namespace Hair_Salon
         {
             return $", {base.Format()}";
         }
+
+        public bool CheckPassword(string password, string file)
+        {
+            string password1 = File.ReadAllText(file).Trim();
+            if (password == password1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }
 

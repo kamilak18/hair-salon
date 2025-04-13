@@ -1,3 +1,2 @@
-[85674d7b-51c7-4802-b72d-0831c08089df][Kamila][Crop][23.04.2025][400 UAH][David]
-[c1ae8730-819b-465e-9bf5-6afa2dbf3e6d][Anna Maria][Curls][16.08.2025][650 UAH][Olena Cartin]
-[e30044aa-bdb0-4c13-a820-3d9a13b7a663][Oleg Martin][Fade][31.03.2025][500 UAH][Ethan Drake]
+[61ddfca8-1b1f-460f-ba9f-6f67561c14a3][Kamila][Curls][16.05.2025][650 UAH][Olena]
+[2dcfa265-6960-4df5-91d3-c76aa91df233][Olha][Fade][23.09.2025][500 UAH][Ethan Drake]

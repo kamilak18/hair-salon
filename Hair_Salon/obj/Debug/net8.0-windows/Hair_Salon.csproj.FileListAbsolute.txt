@@ -22,10 +22,7 @@ K:\programs\ООP\Hair_Salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.pdb
 K:\programs\ООP\Hair_Salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.genruntimeconfig.cache
 K:\programs\ООP\Hair_Salon\Hair_Salon\obj\Debug\net8.0-windows\ref\Hair_Salon.dll
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.exe
-C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.deps.json
-C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.runtimeconfig.json
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.dll
-C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.pdb
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\MaterialSkin.dll
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.csproj.AssemblyReference.cache
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.AppointmentForm.resources
@@ -43,5 +40,8 @@ C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-win
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.dll
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\refint\Hair_Salon.dll
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.pdb
+C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.deps.json
+C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.runtimeconfig.json
+C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\bin\Debug\net8.0-windows\Hair_Salon.pdb
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\Hair_Salon.genruntimeconfig.cache
 C:\Users\super\source\repos\kamilak18\hair-salon\Hair_Salon\obj\Debug\net8.0-windows\ref\Hair_Salon.dll
