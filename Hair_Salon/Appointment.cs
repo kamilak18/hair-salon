@@ -43,5 +43,7 @@ namespace hair_salon_system
         {
             return $"{base.Format()}[{ClientName}][{Hairstyle}][{Date}][{Price}][{HairdresserName}]";
         }
+
+
     }
 }

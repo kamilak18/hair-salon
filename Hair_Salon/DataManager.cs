@@ -15,6 +15,7 @@ namespace hair_salon_system
         {
             get
             {
+<<<<<<< Updated upstream
                 IEntity? entity = null;
 
                 foreach (var item in Entities)
@@ -25,6 +26,9 @@ namespace hair_salon_system
                     }
                 }
                 return entity;
+=======
+                return Entities.FirstOrDefault(e => e.Id == id);
+>>>>>>> Stashed changes
             }
         }
 
@@ -35,24 +39,16 @@ namespace hair_salon_system
 
         public IEnumerable<IEntity> Search(string searchString)
         {
-            foreach (var entity in Entities)
-            {
-                if (entity.Search(searchString))
-                {
-                    yield return entity;
-                }
-            }
+            return Entities.Where(it => it.Search(searchString));
         }
 
+<<<<<<< Updated upstream
         public IEnumerable<IEntity> Filter(FilterDelegate filter)
+=======
+        public IEnumerable<T> Filter(Func<T, bool> filter)
+>>>>>>> Stashed changes
         {
-            foreach (var entity in Entities)
-            {
-                if (filter.Invoke(entity))
-                {
-                    yield return entity;
-                }
-            }
+            return Entities.Where(filter);
         }
 
     }

@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hair_Salon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9229bc442586c584a0c45f703173702136764a24")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df00083dbd9ae49ccfbfd21339466481cbeefb1f")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Hair_Salon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hair_Salon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
